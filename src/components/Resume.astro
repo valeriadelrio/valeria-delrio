@@ -115,17 +115,21 @@ const sections = [
 					</div>
 				))
 			}
-			<h3 class="subhead">{r.labels.certifications}</h3>
-			<ul class="plain-list">
-				{
-					r.certifications.map((c) => (
-						<li>
-							{c.name}
-							{c.issuer && <span class="muted"> — {c.issuer}</span>}
-						</li>
-					))
-				}
-			</ul>
+			{
+				r.certifications.length > 0 && (
+					<>
+						<h3 class="subhead">{r.labels.certifications}</h3>
+						<ul class="plain-list">
+							{r.certifications.map((c) => (
+								<li>
+									{c.name}
+									{c.issuer && <span class="muted"> — {c.issuer}</span>}
+								</li>
+							))}
+						</ul>
+					</>
+				)
+			}
 		</section>
 
 		<section id="skills" aria-labelledby="skills-h">

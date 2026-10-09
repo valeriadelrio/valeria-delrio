@@ -116,15 +116,8 @@ export const resume: Resume = {
 		{ label: 'Herramientas y back-end', items: skillItems.tools },
 		{ label: 'También trabajé con', items: skillItems.previous },
 	],
-	certifications: [
-		{ name: 'Vue.js', issuer: 'Udemy' },
-		{ name: 'Angular 4', issuer: 'Udemy' },
-		{ name: 'Introducción al desarrollo de aplicaciones web' },
-		{ name: 'HTML5' },
-		{ name: 'CSS Intermedio' },
-		{ name: 'Comenzando con CSS' },
-		{ name: 'Git' },
-	],
+	// Only add advanced or industry-recognized ones (e.g. IAAP, AWS); the section hides when empty.
+	certifications: [],
 	spokenLanguages: ['Español — nativo', 'Inglés — intermedio (B1–B2)'],
 	// TODO: 2–4 highlighted projects (describe your role and stack, not confidential UI).
 	projects: [],
