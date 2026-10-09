@@ -20,13 +20,14 @@ export const resume: Resume = {
 				'UI development for an EdTech evaluation and student tracking platform (One95 Percent Group).',
 			bullets: [
 				'Design system & component architecture: built and refined reusable UI components with Vue 3, Quasar and TypeScript.',
-				'Micro frontend architecture: built independent UI modules integrated into the platform, keeping visual consistency through the shared design system.',
+				'Micro frontends with Module Federation: built and maintained the micro frontends loaded by a host application, with the team working across all of them.',
+				'Reused a micro frontend inside other micro frontends, consuming it as a federated remote without breaking the architecture.',
 				'Styling: applied zero-specificity techniques and clean SCSS patterns to allow seamless dynamic styling.',
 				'Accessibility: enforced WCAG 2.1 AA across core UI elements, with full keyboard navigation, screen reader support and explicit ARIA properties.',
 				'Testing: unit tests in Vitest for composables and components, and end-to-end tests in Playwright.',
 				'Collaboration in an agile, cross-functional international team alongside Product, UX/UI and QA.',
 			],
-			stack: ['Vue 3', 'Quasar', 'TypeScript', 'Micro frontends', 'SCSS', 'Vitest', 'Playwright'],
+			stack: ['Vue 3', 'Quasar', 'TypeScript', 'Module Federation', 'SCSS', 'Vitest', 'Playwright'],
 		},
 		{
 			company: 'Levo.ai',

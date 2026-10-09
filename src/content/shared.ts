@@ -23,7 +23,7 @@ export const skillItems = {
 	ui: ['HTML5', 'CSS3', 'SCSS', 'Tailwind CSS', 'Quasar'],
 	data: ['REST APIs', 'GraphQL', 'React Query', 'Redux'],
 	testing: ['Vitest', 'Playwright', 'Cypress'],
-	architecture: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum'],
+	architecture: ['Micro frontends (Module Federation)', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum'],
 	tools: ['Git', 'Node.js', 'Express', 'MongoDB'],
 	// Not in day-to-day use anymore; kept so the experience entries make sense.
 	previous: ['Angular', 'NgRx', 'Jasmine', 'Karma'],
