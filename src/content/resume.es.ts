@@ -122,7 +122,7 @@ export const resume: Resume = {
 		{ name: 'Comenzando con CSS' },
 		{ name: 'Git' },
 	],
-	spokenLanguages: ['Español — nativo', 'Inglés — profesional'],
+	spokenLanguages: ['Español — nativo', 'Inglés — intermedio (B1–B2)'],
 	// TODO: 2–4 highlighted projects (describe your role and stack, not confidential UI).
 	projects: [],
 	links,
