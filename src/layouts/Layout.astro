@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../content/types';
+
+interface Props {
+	lang: Lang;
+	title: string;
+	description: string;
+}
+
+const { lang, title, description } = Astro.props;
+const canonical = new URL(`/${lang}/`, Astro.site ?? Astro.url).href;
+---
+
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="alternate" hreflang="es" href={new URL('/es/', canonical).href} />
+		<link rel="alternate" hreflang="en" href={new URL('/en/', canonical).href} />
+		<link rel="alternate" hreflang="x-default" href={new URL('/', canonical).href} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:locale" content={lang === 'es' ? 'es_AR' : 'en_US'} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

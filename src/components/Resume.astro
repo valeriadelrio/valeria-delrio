@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import type { Lang } from '../content/types';
+import { resumes } from '../content';
+
+interface Props {
+	lang: Lang;
+}
+
+const r = resumes[Astro.props.lang];
+const otherLang: Lang = r.lang === 'es' ? 'en' : 'es';
+const { nav } = r.labels;
+
+const sections = [
+	{ id: 'about', label: nav.about },
+	{ id: 'experience', label: nav.experience },
+	{ id: 'education', label: nav.education },
+	{ id: 'skills', label: nav.skills },
+	...(r.projects.length > 0 ? [{ id: 'projects', label: nav.projects }] : []),
+	{ id: 'contact', label: nav.contact },
+];
+---
+
+<Layout lang={r.lang} title={`${r.name} — ${r.title}`} description={r.meta.description}>
+	<a class="skip-link" href="#main">{r.labels.skipToContent}</a>
+
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="#top">{r.name}</a>
+			<nav aria-label={r.lang === 'es' ? 'Secciones' : 'Sections'}>
+				<ul class="nav-list">
+					{sections.map((s) => <li><a href={`#${s.id}`}>{s.label}</a></li>)}
+				</ul>
+			</nav>
+			<div class="lang-switch" role="group" aria-label={r.labels.switchLanguage}>
+				<span class="lang-current" aria-current="page">{r.lang.toUpperCase()}</span>
+				<span aria-hidden="true">|</span>
+				<a href={`/${otherLang}/`} hreflang={otherLang} lang={otherLang} data-keep-hash>
+					{otherLang.toUpperCase()}
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main id="main" class="container">
+		<section id="top" class="hero">
+			<h1>{r.name}</h1>
+			<p class="hero-title">{r.title}</p>
+			{r.location && <p class="hero-location">{r.location}</p>}
+			<ul class="hero-links">
+				<li><a href={r.links.linkedin} rel="me noopener" target="_blank">LinkedIn</a></li>
+				<li><a href={r.links.github} rel="me noopener" target="_blank">GitHub</a></li>
+				{r.links.email && <li><a href={`mailto:${r.links.email}`}>{r.links.email}</a></li>}
+				{
+					r.cvPdf && (
+						<li>
+							<a class="button" href={r.cvPdf} download>
+								{r.labels.downloadCv}
+							</a>
+						</li>
+					)
+				}
+			</ul>
+		</section>
+
+		<section id="about" aria-labelledby="about-h">
+			<h2 id="about-h">{nav.about}</h2>
+			{r.summary.map((p) => <p class="lead">{p}</p>)}
+		</section>
+
+		<section id="experience" aria-labelledby="experience-h">
+			<h2 id="experience-h">{nav.experience}</h2>
+			<ol class="timeline">
+				{
+					r.experience.map((job) => (
+						<li class="entry">
+							<div class="entry-head">
+								<h3>
+									{job.role} <span class="at">·</span> <span class="org">{job.company}</span>
+								</h3>
+								{job.dates && <p class="dates">{job.dates}</p>}
+							</div>
+							<ul class="bullets">
+								{job.bullets.map((b) => <li>{b}</li>)}
+							</ul>
+							{job.stack && (
+								<ul class="tags" aria-label="Stack">
+									{job.stack.map((t) => <li>{t}</li>)}
+								</ul>
+							)}
+						</li>
+					))
+				}
+			</ol>
+		</section>
+
+		<section id="education" aria-labelledby="education-h">
+			<h2 id="education-h">{nav.education}</h2>
+			{
+				r.education.map((ed) => (
+					<div class="entry">
+						<div class="entry-head">
+							<h3>{ed.degree}</h3>
+							{ed.dates && <p class="dates">{ed.dates}</p>}
+						</div>
+						<p class="org">{ed.institution}</p>
+					</div>
+				))
+			}
+			<h3 class="subhead">{r.labels.certifications}</h3>
+			<ul class="plain-list">
+				{
+					r.certifications.map((c) => (
+						<li>
+							{c.name} <span class="muted">— {c.issuer}</span>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+
+		<section id="skills" aria-labelledby="skills-h">
+			<h2 id="skills-h">{nav.skills}</h2>
+			<dl class="skills">
+				{
+					r.skills.map((g) => (
+						<div class="skill-group">
+							<dt>{g.label}</dt>
+							<dd>
+								<ul class="tags">
+									{g.items.map((i) => <li>{i}</li>)}
+								</ul>
+							</dd>
+						</div>
+					))
+				}
+				<div class="skill-group">
+					<dt>{r.labels.languages}</dt>
+					<dd>
+						<ul class="plain-list">
+							{r.spokenLanguages.map((l) => <li>{l}</li>)}
+						</ul>
+					</dd>
+				</div>
+			</dl>
+		</section>
+
+		{
+			r.projects.length > 0 && (
+				<section id="projects" aria-labelledby="projects-h">
+					<h2 id="projects-h">{nav.projects}</h2>
+					<div class="projects">
+						{r.projects.map((p) => (
+							<article class="project">
+								<h3>{p.url ? <a href={p.url}>{p.name}</a> : p.name}</h3>
+								<p>{p.description}</p>
+								<ul class="tags">
+									{p.stack.map((t) => <li>{t}</li>)}
+								</ul>
+							</article>
+						))}
+					</div>
+				</section>
+			)
+		}
+
+		<section id="contact" aria-labelledby="contact-h">
+			<h2 id="contact-h">{nav.contact}</h2>
+			<p class="lead">{r.labels.contactIntro}</p>
+			<ul class="contact-list">
+				{
+					r.links.email && (
+						<li>
+							<span class="muted">Email</span>
+							<a href={`mailto:${r.links.email}`}>{r.links.email}</a>
+						</li>
+					)
+				}
+				<li>
+					<span class="muted">LinkedIn</span>
+					<a href={r.links.linkedin} rel="me noopener" target="_blank">
+						{r.links.linkedin.replace('https://www.', '')}
+					</a>
+				</li>
+				<li>
+					<span class="muted">GitHub</span>
+					<a href={r.links.github} rel="me noopener" target="_blank">
+						{r.links.github.replace('https://', '')}
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">© {new Date().getFullYear()} {r.name}</div>
+	</footer>
+</Layout>
+
+<script>
+	// Keep the current section when switching language (e.g. /es/#skills -> /en/#skills).
+	document.querySelectorAll<HTMLAnchorElement>('a[data-keep-hash]').forEach((a) => {
+		a.addEventListener('click', () => {
+			if (location.hash) a.hash = location.hash;
+		});
+	});
+</script>
