@@ -24,7 +24,7 @@ export const skillItems = {
 	data: ['REST APIs', 'GraphQL', 'React Query', 'Redux'],
 	testing: ['Vitest', 'Playwright', 'Cypress'],
 	architecture: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum'],
-	tools: ['Git', 'Node.js', 'Express'],
+	tools: ['Git', 'Node.js', 'Express', 'MongoDB'],
 	// Not in day-to-day use anymore; kept so the experience entries make sense.
 	previous: ['Angular', 'NgRx', 'Jasmine', 'Karma'],
 } satisfies Record<string, SkillGroup['items']>;
