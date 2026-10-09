@@ -8,7 +8,8 @@ export const resume: Resume = {
 	location: 'Argentina',
 	summary: [
 		'Ingeniera de Sistemas especializada en desarrollo front-end, con más de 8 años construyendo interfaces web con React, Vue 3 y TypeScript (y antes Angular).',
-		'Me enfoco en design systems, accesibilidad (WCAG 2.1 AA) y testing automatizado. Soy proactiva, disfruto aprender tecnologías nuevas y creo en el trabajo en equipo: me hace crecer tanto profesional como personalmente.',
+		'Tengo experiencia en arquitecturas de micro frontends con Module Federation: desarrollo y mantengo micro frontends que se integran en una aplicación host, y reutilizo micro frontends dentro de otros sin romper la arquitectura federada. También me enfoco en design systems, accesibilidad (WCAG 2.1 AA) y testing automatizado.',
+		'Soy proactiva, disfruto aprender tecnologías nuevas y creo en el trabajo en equipo: me hace crecer tanto profesional como personalmente.',
 	],
 	experience: [
 		{

@@ -8,7 +8,8 @@ export const resume: Resume = {
 	location: 'Argentina',
 	summary: [
 		'Systems Engineer specialized in front-end development, with 8+ years building web interfaces with React, Vue 3 and TypeScript (and Angular before that).',
-		'I focus on design systems, accessibility (WCAG 2.1 AA) and automated testing. I am proactive, love picking up new technologies, and believe in teamwork: it helps me grow both professionally and personally.',
+		'I have hands-on experience with micro frontend architectures using Module Federation: I build and maintain micro frontends integrated into a host application, and reuse micro frontends inside others without breaking the federated architecture. I also focus on design systems, accessibility (WCAG 2.1 AA) and automated testing.',
+		'I am proactive, love picking up new technologies, and believe in teamwork: it helps me grow both professionally and personally.',
 	],
 	experience: [
 		{
