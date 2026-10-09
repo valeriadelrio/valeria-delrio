@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import OrgMark from './OrgMark.astro';
 import type { Lang } from '../content/types';
 import { resumes } from '../content';
 
@@ -73,22 +74,25 @@ const sections = [
 			<ol class="timeline">
 				{
 					r.experience.map((job) => (
-						<li class="entry">
-							<div class="entry-head">
-								<h3>
-									{job.role} <span class="at">·</span> <span class="org">{job.company}</span>
-								</h3>
-								{job.dates && <p class="dates">{job.dates}</p>}
-							</div>
-							{job.summary && <p class="entry-summary">{job.summary}</p>}
-							<ul class="bullets">
-								{job.bullets.map((b) => <li>{b}</li>)}
-							</ul>
-							{job.stack && (
-								<ul class="tags" aria-label="Stack">
-									{job.stack.map((t) => <li>{t}</li>)}
+						<li class="entry has-mark">
+							<OrgMark name={job.company} logo={job.logo} />
+							<div class="entry-body">
+								<div class="entry-head">
+									<h3>
+										{job.role} <span class="at">·</span> <span class="org">{job.company}</span>
+									</h3>
+									{job.dates && <p class="dates">{job.dates}</p>}
+								</div>
+								{job.summary && <p class="entry-summary">{job.summary}</p>}
+								<ul class="bullets">
+									{job.bullets.map((b) => <li>{b}</li>)}
 								</ul>
-							)}
+								{job.stack && (
+									<ul class="tags" aria-label="Stack">
+										{job.stack.map((t) => <li>{t}</li>)}
+									</ul>
+								)}
+							</div>
 						</li>
 					))
 				}
@@ -99,12 +103,15 @@ const sections = [
 			<h2 id="education-h">{nav.education}</h2>
 			{
 				r.education.map((ed) => (
-					<div class="entry">
-						<div class="entry-head">
-							<h3>{ed.degree}</h3>
-							{ed.dates && <p class="dates">{ed.dates}</p>}
+					<div class="entry has-mark">
+						<OrgMark name={ed.institution} logo={ed.logo} />
+						<div class="entry-body">
+							<div class="entry-head">
+								<h3>{ed.degree}</h3>
+								{ed.dates && <p class="dates">{ed.dates}</p>}
+							</div>
+							<p class="org">{ed.institution}</p>
 						</div>
-						<p class="org">{ed.institution}</p>
 					</div>
 				))
 			}

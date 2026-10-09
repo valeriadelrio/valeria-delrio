@@ -1,4 +1,4 @@
-import { cvPdf, links, skillItems } from './shared';
+import { cvPdf, links, logos, skillItems } from './shared';
 import type { Resume } from './types';
 
 export const resume: Resume = {
@@ -13,6 +13,7 @@ export const resume: Resume = {
 	experience: [
 		{
 			company: 'GlobalLogic',
+			logo: logos.globallogic,
 			role: 'Senior Software Developer',
 			dates: 'Jun 2024 – Present',
 			summary:
@@ -28,6 +29,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Levo.ai',
+			logo: logos.levo,
 			role: 'Founding UI Engineer',
 			dates: 'Oct 2021 – Oct 2023',
 			summary:
@@ -54,6 +56,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Globant',
+			logo: logos.globant,
 			role: 'Web UI Developer Ssr Adv',
 			dates: 'Jun 2020 – Nov 2020',
 			summary: "Talent Surfer: Globant's internal platform for loading client opportunities.",
@@ -66,6 +69,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Globant',
+			logo: logos.globant,
 			role: 'Web UI Developer Ssr',
 			dates: 'Mar 2019 – Jul 2020',
 			summary:
@@ -89,6 +93,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+			logo: logos.unicen,
 			role: 'IT Administrator',
 			dates: 'Oct 2013 – Nov 2017',
 			bullets: ['Maintained and developed the website, and maintained computer equipment.'],
@@ -97,6 +102,7 @@ export const resume: Resume = {
 	education: [
 		{
 			institution: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+			logo: logos.unicen,
 			degree: 'Systems Engineering',
 			dates: '2007 – 2017',
 		},

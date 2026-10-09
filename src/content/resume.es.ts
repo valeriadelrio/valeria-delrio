@@ -1,4 +1,4 @@
-import { cvPdf, links, skillItems } from './shared';
+import { cvPdf, links, logos, skillItems } from './shared';
 import type { Resume } from './types';
 
 export const resume: Resume = {
@@ -13,6 +13,7 @@ export const resume: Resume = {
 	experience: [
 		{
 			company: 'GlobalLogic',
+			logo: logos.globallogic,
 			role: 'Senior Software Developer',
 			dates: 'jun 2024 – Actualidad',
 			summary:
@@ -28,6 +29,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Levo.ai',
+			logo: logos.levo,
 			role: 'Founding UI Engineer',
 			dates: 'oct 2021 – oct 2023',
 			summary:
@@ -54,6 +56,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Globant',
+			logo: logos.globant,
 			role: 'Web UI Developer Ssr Adv',
 			dates: 'jun 2020 – nov 2020',
 			summary: 'Talent Surfer: plataforma interna de Globant para cargar oportunidades de clientes.',
@@ -66,6 +69,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Globant',
+			logo: logos.globant,
 			role: 'Web UI Developer Ssr',
 			dates: 'mar 2019 – jul 2020',
 			summary:
@@ -89,6 +93,7 @@ export const resume: Resume = {
 		},
 		{
 			company: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+			logo: logos.unicen,
 			role: 'Administradora de TICs',
 			dates: 'oct 2013 – nov 2017',
 			bullets: ['Mantenimiento y desarrollo del sitio web, y mantenimiento de equipos.'],
@@ -97,6 +102,7 @@ export const resume: Resume = {
 	education: [
 		{
 			institution: 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
+			logo: logos.unicen,
 			degree: 'Ingeniería en Sistemas',
 			dates: '2007 – 2017',
 		},

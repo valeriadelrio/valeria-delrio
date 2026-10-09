@@ -1,7 +1,11 @@
+import type { ImageMetadata } from 'astro';
+
 export type Lang = 'es' | 'en';
 
 export interface Experience {
 	company: string;
+	/** Company logo. Entries without one get a generated abstract mark. */
+	logo?: ImageMetadata;
 	role: string;
 	/** Free text, e.g. "jun 2024 – Actualidad". */
 	dates?: string;
@@ -13,6 +17,7 @@ export interface Experience {
 
 export interface Education {
 	institution: string;
+	logo?: ImageMetadata;
 	degree: string;
 	dates?: string;
 }
