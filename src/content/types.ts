@@ -25,6 +25,8 @@ export interface Education {
 export interface SkillGroup {
 	label: string;
 	items: string[];
+	/** Core stack: rendered first and with stronger emphasis. */
+	featured?: boolean;
 }
 
 export interface Certification {

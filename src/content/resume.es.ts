@@ -108,10 +108,12 @@ export const resume: Resume = {
 		},
 	],
 	skills: [
-		{ label: 'Lenguajes', items: skillItems.languages },
-		{ label: 'Frameworks y librerías', items: skillItems.frameworks },
+		{ label: 'Stack principal', items: skillItems.core, featured: true },
+		{ label: 'UI y estilos', items: skillItems.ui },
+		{ label: 'Estado y datos', items: skillItems.data },
 		{ label: 'Testing', items: skillItems.testing },
-		{ label: 'Prácticas', items: skillItems.practices },
+		{ label: 'Arquitectura y prácticas', items: skillItems.architecture },
+		{ label: 'Herramientas y back-end', items: skillItems.tools },
 	],
 	certifications: [
 		{ name: 'Vue.js', issuer: 'Udemy' },

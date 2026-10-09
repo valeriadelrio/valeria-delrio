@@ -133,17 +133,17 @@ const sections = [
 			<dl class="skills">
 				{
 					r.skills.map((g) => (
-						<div class="skill-group">
+						<div class:list={['skill-group', { featured: g.featured }]}>
 							<dt>{g.label}</dt>
 							<dd>
-								<ul class="tags">
+								<ul class:list={['tags', { 'tags-strong': g.featured }]}>
 									{g.items.map((i) => <li>{i}</li>)}
 								</ul>
 							</dd>
 						</div>
 					))
 				}
-				<div class="skill-group">
+				<div class="skill-group spoken">
 					<dt>{r.labels.languages}</dt>
 					<dd>
 						<ul class="plain-list">

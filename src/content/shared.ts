@@ -17,21 +17,12 @@ export const logos = { globallogic, globant, levo, unicen };
 // TODO: drop the PDF in public/ and set this path to show the download button.
 export const cvPdf: string | undefined = undefined;
 
+// Ordered by relevance: what a recruiter should see first goes first.
 export const skillItems = {
-	languages: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS'],
-	frameworks: [
-		'Vue 3',
-		'Quasar',
-		'React',
-		'Redux',
-		'React Query',
-		'Angular',
-		'NgRx',
-		'Tailwind CSS',
-		'GraphQL',
-		'Node.js',
-		'Express',
-	],
+	core: ['TypeScript', 'JavaScript', 'Vue 3', 'React', 'Angular'],
+	ui: ['HTML5', 'CSS3', 'SCSS', 'Tailwind CSS', 'Quasar'],
+	data: ['Redux', 'NgRx', 'React Query', 'GraphQL'],
 	testing: ['Vitest', 'Playwright', 'Cypress', 'Jasmine', 'Karma'],
-	practices: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum', 'Git'],
+	architecture: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum'],
+	tools: ['Git', 'Node.js', 'Express'],
 } satisfies Record<string, SkillGroup['items']>;

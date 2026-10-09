@@ -395,6 +395,14 @@ h3 .org {
 	font-weight: 500;
 }
 
+.tags-strong li {
+	padding: 0.3rem 0.8rem;
+	background: var(--accent);
+	color: var(--bg);
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
 .subhead {
 	margin-top: 2rem;
 	font-size: 0.95rem;
@@ -427,6 +435,16 @@ h3 .org {
 
 .skill-group dt {
 	font-weight: 600;
+}
+
+.skill-group.featured {
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid var(--border);
+}
+
+.skill-group.spoken {
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--border);
 }
 
 .skill-group dd {
