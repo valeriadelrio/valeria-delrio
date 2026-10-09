@@ -33,5 +33,5 @@ export const skillItems = {
 		'Express',
 	],
 	testing: ['Vitest', 'Playwright', 'Cypress', 'Jasmine', 'Karma'],
-	practices: ['WCAG 2.1 AA', 'Design systems', 'Agile / Scrum', 'Git'],
+	practices: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum', 'Git'],
 } satisfies Record<string, SkillGroup['items']>;
