@@ -19,10 +19,12 @@ export const cvPdf: string | undefined = undefined;
 
 // Ordered by relevance: what a recruiter should see first goes first.
 export const skillItems = {
-	core: ['TypeScript', 'JavaScript', 'Vue 3', 'React', 'Angular'],
+	core: ['React', 'Vue 3', 'TypeScript', 'JavaScript'],
 	ui: ['HTML5', 'CSS3', 'SCSS', 'Tailwind CSS', 'Quasar'],
-	data: ['Redux', 'NgRx', 'React Query', 'GraphQL'],
-	testing: ['Vitest', 'Playwright', 'Cypress', 'Jasmine', 'Karma'],
+	data: ['REST APIs', 'GraphQL', 'React Query', 'Redux'],
+	testing: ['Vitest', 'Playwright', 'Cypress'],
 	architecture: ['Micro frontends', 'Design systems', 'WCAG 2.1 AA', 'Agile / Scrum'],
 	tools: ['Git', 'Node.js', 'Express'],
+	// Not in day-to-day use anymore; kept so the experience entries make sense.
+	previous: ['Angular', 'NgRx', 'Jasmine', 'Karma'],
 } satisfies Record<string, SkillGroup['items']>;

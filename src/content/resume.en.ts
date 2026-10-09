@@ -7,7 +7,7 @@ export const resume: Resume = {
 	title: 'UI Engineer · Senior Software Developer',
 	location: 'Argentina',
 	summary: [
-		'Systems Engineer specialized in front-end development, with 8+ years building web interfaces with Vue 3, React, Angular and TypeScript.',
+		'Systems Engineer specialized in front-end development, with 8+ years building web interfaces with React, Vue 3 and TypeScript (and Angular before that).',
 		'I focus on design systems, accessibility (WCAG 2.1 AA) and automated testing. I am proactive, love picking up new technologies, and believe in teamwork: it helps me grow both professionally and personally.',
 	],
 	experience: [
@@ -110,10 +110,11 @@ export const resume: Resume = {
 	skills: [
 		{ label: 'Core stack', items: skillItems.core, featured: true },
 		{ label: 'UI & styling', items: skillItems.ui },
-		{ label: 'State & data', items: skillItems.data },
+		{ label: 'Data & APIs', items: skillItems.data },
 		{ label: 'Testing', items: skillItems.testing },
 		{ label: 'Architecture & practices', items: skillItems.architecture },
 		{ label: 'Tools & back-end', items: skillItems.tools },
+		{ label: 'Also worked with', items: skillItems.previous },
 	],
 	certifications: [
 		{ name: 'Vue.js', issuer: 'Udemy' },
@@ -147,6 +148,6 @@ export const resume: Resume = {
 	},
 	meta: {
 		description:
-			'Valeria del Rio — UI Engineer and Senior Software Developer. Vue 3, React, Angular and TypeScript.',
+			'Valeria del Rio — UI Engineer and Senior Software Developer. React, Vue 3 and TypeScript.',
 	},
 };
