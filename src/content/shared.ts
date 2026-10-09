@@ -3,7 +3,7 @@ import type { Links, SkillGroup } from './types';
 // Data that is identical in both languages.
 
 export const links: Links = {
-	// TODO: add an email if you want it shown in the contact section.
+	email: 'valeriadlrio@gmail.com',
 	linkedin: 'https://www.linkedin.com/in/valeriadelrio',
 	github: 'https://github.com/valeriadelrio',
 };
@@ -12,7 +12,20 @@ export const links: Links = {
 export const cvPdf: string | undefined = undefined;
 
 export const skillItems = {
-	languages: ['TypeScript', 'JavaScript', 'HTML', 'CSS'],
-	frameworks: ['React', 'Redux', 'Vue 3', 'Angular', 'Tailwind CSS', 'GraphQL'],
-	tools: ['Git', 'Cypress'],
+	languages: ['TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS'],
+	frameworks: [
+		'Vue 3',
+		'Quasar',
+		'React',
+		'Redux',
+		'React Query',
+		'Angular',
+		'NgRx',
+		'Tailwind CSS',
+		'GraphQL',
+		'Node.js',
+		'Express',
+	],
+	testing: ['Vitest', 'Playwright', 'Cypress', 'Jasmine', 'Karma'],
+	practices: ['WCAG 2.1 AA', 'Design systems', 'Agile / Scrum', 'Git'],
 } satisfies Record<string, SkillGroup['items']>;

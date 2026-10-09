@@ -3,8 +3,10 @@ export type Lang = 'es' | 'en';
 export interface Experience {
 	company: string;
 	role: string;
-	/** Free text, e.g. "2021 – Presente". Omit until the real dates are known. */
+	/** Free text, e.g. "jun 2024 – Actualidad". */
 	dates?: string;
+	/** One or two sentences of context: product, client, team. */
+	summary?: string;
 	bullets: string[];
 	stack?: string[];
 }
@@ -22,7 +24,7 @@ export interface SkillGroup {
 
 export interface Certification {
 	name: string;
-	issuer: string;
+	issuer?: string;
 }
 
 export interface Project {

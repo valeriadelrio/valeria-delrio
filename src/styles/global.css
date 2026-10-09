@@ -322,6 +322,11 @@ h3 .org {
 	white-space: nowrap;
 }
 
+.entry-summary {
+	margin: 0.5rem 0 0;
+	color: var(--muted);
+}
+
 .bullets {
 	margin: 0.6rem 0 0;
 	padding-left: 1.15rem;

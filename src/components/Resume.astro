@@ -80,6 +80,7 @@ const sections = [
 								</h3>
 								{job.dates && <p class="dates">{job.dates}</p>}
 							</div>
+							{job.summary && <p class="entry-summary">{job.summary}</p>}
 							<ul class="bullets">
 								{job.bullets.map((b) => <li>{b}</li>)}
 							</ul>
@@ -112,7 +113,8 @@ const sections = [
 				{
 					r.certifications.map((c) => (
 						<li>
-							{c.name} <span class="muted">— {c.issuer}</span>
+							{c.name}
+							{c.issuer && <span class="muted"> — {c.issuer}</span>}
 						</li>
 					))
 				}
